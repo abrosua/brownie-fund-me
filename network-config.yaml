@@ -1,0 +1,7 @@
+live:
+- name: Ethereum
+  networks:
+  - chainid: 1337
+    host: http://127.0.0.1:7545
+    id: ganache-local
+    name: Ganache UI (Local)

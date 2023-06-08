@@ -1,0 +1,22 @@
+dotenv: .env
+wallets:
+  key_playground: ${PRIVATE_KEY_PLAYGROUND}
+dependencies:
+  # - <organization/repo>@<version>
+  - smartcontractkit/chainlink-brownie-contracts@1.1.1
+compiler:
+  solc:
+    remappings:
+      - "@chainlink=smartcontractkit/chainlink-brownie-contracts@1.1.1"
+networks:
+  sepolia:
+    eth_usd_price_feed: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+    verify: True
+  # use the Ethereum mainnet data (forked/copied)
+  mainnet-fork:  # already available in Brownie
+    eth_usd_price_feed: "0x5f4ec3df9cbd43714fe2740f5e3616155c5b8419"
+    verify: False
+  development:
+    verify: False
+  ganache-local:
+    verify: False
