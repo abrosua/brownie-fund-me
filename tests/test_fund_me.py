@@ -7,6 +7,14 @@ from scripts.utils import get_account, LOCAL_BLOCKCHAIN_ENV
 def test_can_fund_and_withdraw():
     """
     Standard test on agnostic chain (will include deployment here just for the testing)
+
+    Notes
+    -----
+    Where should I run my tests?
+    1. Brownie Ganache Chain with Mocks: Always
+    2. Testnet: Always (only for integration testing!)
+    3. (Optional) Brownie mainnet-fork
+    4. (Optional) Custom mainnet-fork (e.g., infura, alchemy)
     """
     # Arrange
     account = get_account()
